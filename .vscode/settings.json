@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "explorer.compactFolders": false,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.singleQuote": true,
+    "editor.codeActionsOnSave": null
+}
