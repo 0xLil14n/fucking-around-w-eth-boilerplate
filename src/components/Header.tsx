@@ -15,7 +15,7 @@ export const Header = () => {
         if (isWeb3Enabled) {
             enableAndAuthenticate();
         } else {
-            enableWeb3();
+            logout();
         }
     };
 
@@ -25,15 +25,17 @@ export const Header = () => {
         }
     }, [isAuthenticated]);
     const isLoading = isAuthenticating || isWeb3EnableLoading;
-    const isLoggedIn = isWeb3Enabled;
+    const isLoggedIn = isAuthenticated;
     return (
         <StyledHeader>
-            <Button disabled={isAuthenticating} onClick={signInOrSignOut}>
-                {isLoading ? 'Loading...' : isLoggedIn ? 'Sign Out' : 'Sign In'}
+            <Button variant="outlined" disabled={isAuthenticating} onClick={signInOrSignOut}>
+                {isLoading ? 'Loading...' : isLoggedIn ? 'Disconnect' : 'Connect and Log In'}
             </Button>
         </StyledHeader>
     );
 };
 
-const StyledHeader = styled.div``;
+const StyledHeader = styled.div`
+    padding: 10px;
+`;
 const StyledButton = styled.button``;
